@@ -108,7 +108,7 @@ Content-Type: application/json
   "date_fin": "2025-07-20T16:05:00"
 }
 
-### 📄 Lister les réservations de l'utilisateur
+### Lister les réservations de l'utilisateur
 
 GET /api/users/{id}/reservations
 Authorization: Bearer {token}
