@@ -1,0 +1,15 @@
+# Laravel
+/backend/vendor/
+/backend/.env
+/backend/storage/
+/backend/bootstrap/cache/
+
+# Nuxt
+/frontend/node_modules/
+/frontend/.output/
+/frontend/.nuxt/
+/frontend/.env
+
+# Global
+.DS_Store
+*.log
