@@ -38,7 +38,7 @@ README.md     -> Details du projet
 - MySQL ou MariaDB
 - NPM ou npx
 
-### 🔧 Installation Backend (Laravel)
+### Installation Backend (Laravel)
 
 Commandes backend à taper:
 cd backend
@@ -49,7 +49,7 @@ php artisan jwt:secret
 php artisan migrate --seed
 php artisan serve
 
-### 🔧 Installation Frontend (NuxtJS 3)
+### Installation Frontend (NuxtJS 3)
 
 Commandes frontend à taper:
 cd frontend
@@ -58,7 +58,7 @@ npm run dev
 
 ---
 
-## 🔐 Authentification
+## Authentification
 
 Le backend utilise **auth:api** pour sécuriser les endpoints via JWT.
 
@@ -133,7 +133,7 @@ php artisan test --testsuite=Feature
 
 ---
 
-## 🧑‍💻 Auteur
+## Auteur
 
 Projet fonctionnel développé par MBIAPO NZEPA Idriss Cabrel
 
