@@ -5,6 +5,27 @@ namespace App\Http\Controllers;
 use App\Models\Bureau;
 use Illuminate\Http\Request;
 
+/**
+* @OA\Get(
+*     path="/api/bureaus",
+*     summary="Liste tous les bureaux",
+*     tags={"Bureaux"},
+*     @OA\Response(
+*         response=200,
+*         description="Liste des bureaux",
+*         @OA\JsonContent(
+*             type="array",
+*             @OA\Items(
+*                 @OA\Property(property="id", type="integer", example=1),
+*                 @OA\Property(property="nom", type="string", example="Bureau 1"),
+*                 @OA\Property(property="emplacement", type="string", example="étage")
+*             )
+*         )
+*     )
+* )
+*/
+
+
 class BureauController extends Controller
 {
     /**
@@ -15,51 +36,4 @@ class BureauController extends Controller
         return response()->json(Bureau::all());
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Bureau $bureau)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Bureau $bureau)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Bureau $bureau)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Bureau $bureau)
-    {
-        //
-    }
 }

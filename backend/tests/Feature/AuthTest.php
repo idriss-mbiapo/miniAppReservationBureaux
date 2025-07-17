@@ -12,20 +12,22 @@ class AuthTest extends TestCase
 {
     use RefreshDatabase;
 
-    //verifier si l'utilisateur peut etre connecté en utilisant JWT
+    /**
+     * verifier si l'utilisateur peut etre connecté en utilisant JWT
+     */
+
     public function test_user_can_login_with_jwt()
     {
-        $user = User::factory()->create([
+        User::factory()->create([
             'email' => 'idriss@gmail.com',
-            'password' => bcrypt('Dev@2025')
+            'password' => bcrypt('password')
         ]);
 
         $response = $this->postJson('/api/login', [
             'email' => 'idriss@gmail.com',
-            'password' => 'Dev@2025'
+            'password' => 'password'
         ]);
 
-        $response->assertStatus(200)
-                 ->assertJsonStructure(['access_token', 'token_type', 'expires_in','user']);
+        $response->assertStatus(200)->assertJsonStructure(['access_token', 'token_type', 'expires_in','user']);
     }
 }
